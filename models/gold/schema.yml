@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: daily_order_stats
+    description: "Daily aggregated order statistics"
+    columns:
+      - name: order_date
+        description: "Date of orders"
+        tests:
+          - unique
+          - not_null
+      - name: total_orders
+        description: "Number of orders for the day"
+        tests:
+          - not_null
+      - name: total_revenue
+        description: "Total revenue for the day"
+        tests:
+          - not_null
+      - name: avg_order_value
+        description: "Average order value for the day"
+        tests:
+          - not_null 

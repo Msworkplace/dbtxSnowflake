@@ -1,0 +1,17 @@
+version: 2
+
+models:
+  - name: raw_orders
+    description: "Raw orders data from source system"
+    columns:
+      - name: order_id
+        description: "Primary key for orders"
+        tests:
+          - unique
+          - not_null
+      - name: customer_id
+        description: "Foreign key to customers"
+      - name: order_date
+        description: "Date when the order was placed"
+      - name: total_amount
+        description: "Total order amount" 
